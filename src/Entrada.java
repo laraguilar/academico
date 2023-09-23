@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * Classe com as rotinas de entrada e saída do projeto
- * @author Hilario Seibel Junior e <seu nome aqui>
+ * @author Hilario Seibel Junior e Lara Aguilar de Amorim
  */
 public class Entrada {
     public Scanner input;
@@ -95,7 +95,7 @@ public class Entrada {
      * Lê os dados de um novo Professor e cadastra-o no sistema.
      * @param s: Um objeto da classe Sistema
      */
-    /*public void cadProf(Sistema s) {
+    public void cadProf(Sistema s) {
         s.listarProfs();
 
         String nome = this.lerLinha("Digite o nome do professor: ");
@@ -109,13 +109,13 @@ public class Entrada {
         else {
             System.out.println("Erro: CPF duplicado. Professor não adicionado.");
         }
-    }*/
+    }
 
     /**
      * Lê os dados de um novo Aluno e cadastra-o no sistema.
      * @param s: Um objeto da classe Sistema
      */
-    /*public void cadAluno(Sistema s) {
+    public void cadAluno(Sistema s) {
         s.listarAlunos();
 
         String nome = this.lerLinha("Digite o nome do aluno: ");
@@ -129,7 +129,7 @@ public class Entrada {
         else {
             System.out.println("Erro: Matrícula duplicada. Aluno não adicionado.");
         }
-    }*/
+    }
 
     /***************************************************/
 
@@ -138,7 +138,7 @@ public class Entrada {
      * @param s: Um objeto da classe Sistema
      * @return Um objeto da classe Professor.
      */
-    /*private Professor lerProf(Sistema s) {
+    private Professor lerProf(Sistema s) {
         s.listarProfs();
 
         String cpf = this.lerLinha("Digite o CPF do professor: ");
@@ -150,14 +150,14 @@ public class Entrada {
         }
 
         return p;
-    }*/
+    }
 
     /**
      * Lê um número de alunos, depois a matrícula de cada aluno e localiza-os no sistema.
      * @param s: Um objeto da classe Sistema
      * @return Um array contendo todos os objetos da classe Aluno cujas matrículas foram digitadas.
      */
-    /*private Aluno[] lerAlunos(Sistema s) {
+    private Aluno[] lerAlunos(Sistema s) {
         int nAlunos = this.lerInteiro("Digite a quantidade de alunos na disciplina: ");
         Aluno[] alunos = new Aluno[nAlunos];
 
@@ -176,7 +176,7 @@ public class Entrada {
         }
 
         return alunos;
-    }*/
+    }
 
     /**
      * Lê as notas de um aluno em uma prova.
@@ -185,7 +185,7 @@ public class Entrada {
      * @param nQuestoes: Inteiro com o número de questões nesta prova
      * @return Um objeto da classe AlunoProva, com as respectivas as notas do aluno em cada questão da prova.
      */
-    /*private AlunoProva lerAlunoProva(Sistema s, Aluno a, int nQuestoes) {
+    private AlunoProva lerAlunoProva(Sistema s, Aluno a, int nQuestoes) {
         double[] notas = new double[nQuestoes];
 
         for (int i=0; i<nQuestoes; i++) {
@@ -193,7 +193,7 @@ public class Entrada {
         }
 
         return new AlunoProva(a, notas);
-    }*/
+    }
 
     /**
      * Lê os dados de uma Prova.
@@ -201,7 +201,7 @@ public class Entrada {
      * @param alunos: Um array com todos os alunos que fizeram esta prova.
      * @return Um novo objeto da classe Prova com todos os dados que foram lidos.
      */
-    /*private Prova lerProva(Sistema s, Aluno[] alunos) {
+    private Prova lerProva(Sistema s, Aluno[] alunos) {
         String nome = this.lerLinha("Informe o nome desta prova: ");
 
         int dia = this.lerInteiro("Digite o dia da prova: ");
@@ -218,7 +218,7 @@ public class Entrada {
         }
 
         return new Prova(nome, aplic, valor, nQuestoes, notas);
-    }*/
+    }
 
     /**
      * Lê a avaliação que o professor fez de um aluno em um trabalho.
@@ -226,7 +226,7 @@ public class Entrada {
      * @param a: Um objeto da classe Aluno
      * @return Um objeto da classe AlunoTrab com as informações lidas sobre o aluno neste trabalho.
      */
-    /*private AlunoTrab lerAlunoTrab(Sistema s, Aluno a) {
+    private AlunoTrab lerAlunoTrab(Sistema s, Aluno a) {
         double nota = this.lerDouble("Nota do " + a.getNome() + " no trabalho: ");
 
         int dia = this.lerInteiro("Digite o dia de entrega do trabalho: ");
@@ -237,7 +237,7 @@ public class Entrada {
         int tempoExec = this.lerInteiro("Informe o tempo de processamento: ");
 
         return new AlunoTrab(a, nota, entrega, tempoExec);
-    }*/
+    }
 
     /**
      * Lê os dados de um Trabalho.
@@ -245,7 +245,7 @@ public class Entrada {
      * @param alunos: Um array com todos os alunos que fizeram esta prova.
      * @return Um novo objeto da classe Trabalho com todos os dados que foram lidos.
      */
-    /*private Trabalho lerTrabalho(Sistema s, Aluno[] alunos) {
+    private Trabalho lerTrabalho(Sistema s, Aluno[] alunos) {
         String nome = this.lerLinha("Informe o nome desta avaliação: ");
 
         int dia = this.lerInteiro("Digite o dia do trabalho: ");
@@ -262,7 +262,7 @@ public class Entrada {
         }
 
         return new Trabalho(nome, aplic, valor, tempoEsp, notas);
-    }*/
+    }
 
     /**
      * Lê as avaliações de uma certa disciplina.
@@ -270,7 +270,7 @@ public class Entrada {
      * @param alunos: Um array com todos os alunos que fizeram esta prova.
      * @return Um array com todas as avaliações da disciplina.
      */
-    /*private Avaliacao[] lerAvaliacoes(Sistema s, Aluno[] alunos) {
+    private Avaliacao[] lerAvaliacoes(Sistema s, Aluno[] alunos) {
         int nAvaliacoes = this.lerInteiro("Digite a quantidade de avaliações na disciplina: ");
         Avaliacao[] avs = new Avaliacao[nAvaliacoes];
 
@@ -286,14 +286,14 @@ public class Entrada {
         }
 
         return avs;
-    }*/
+    }
 
     /**
      * Lê os dados de uma Turma.
      * @param s: Um objeto da classe Sistema
      * @return Um novo objeto da classe Turma com todos os dados desta turma.
      */
-    /*public Turma cadTurma(Sistema s) {
+    public Turma cadTurma(Sistema s) {
         String disciplina = this.lerLinha("Digite o nome da disciplina: ");
         int ano = this.lerInteiro("Digite o ano da disciplina: ");
         int sem = this.lerInteiro("Digite o semestre da disciplina: ");
@@ -304,6 +304,6 @@ public class Entrada {
 
         return new Turma(disciplina, ano, sem, p, alunos, avs);
 
-    }*/
+    }
 
 }
