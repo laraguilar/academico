@@ -3,16 +3,6 @@ import java.util.Scanner;
 public class Aluno extends Pessoa{
     private String mat;
 
-    public Aluno() {
-        super();
-
-        Scanner s = new Scanner(System.in);
-        System.out.print("Matrícula: ");
-        setMat(s.nextLine());
-
-        System.out.println("Aluno cadastrado com sucesso!");
-    }
-
     public Aluno(String nome, String cpf, String mat) {
         super(nome, cpf);
         this.mat = mat;
@@ -20,7 +10,7 @@ public class Aluno extends Pessoa{
     }
 
     public String toString() {
-        return (nome + " (Matrícula: " + mat + ")");
+        return (getNome() + " (Matrícula: " + getMat() + ")");
     }
 
     public String getMat() {
